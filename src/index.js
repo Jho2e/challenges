@@ -1,62 +1,55 @@
-// <⚠️ DONT DELETE THIS ⚠️>
-import "./styles.css";
+const yyyy = document.querySelector("body");
 const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"];
-// <⚠️ /DONT DELETE THIS ⚠️>
 
-/*
-✅ The text of the title should change when the mouse is on top of it.
-✅ The text of the title should change when the mouse is leaves it.
-✅ When the window is resized the title should change.
-✅ On right click the title should also change.
-✅ The colors of the title should come from a color from the colors array.
-✅ DO NOT CHANGE .css, or .html files.
-✅ ALL function handlers should be INSIDE of "superEventHandler"
-*/
-const h2 = document.querySelector("h2");
+function handleResize() {
+  var width = window.innerWidth;
 
-/*
-const superEventHandler = {
-  handleMouseEnter: function () {
-    h2.innerText = "The mouse is here!";
-    h2.style.color = colors[0];
-  },
-  handleMouseLeave: function () {
-    h2.innerText = "The mouse is gone!";
-    h2.style.color = colors[1];
-  },
-  handleWindowContextmenu: function () {
-    h2.innerText = "That was a right click!";
-    h2.style.color = colors[2];
-  },
-  handleWindowResize: function () {
-    h2.innerText = "You just resized!";
-    h2.style.color = colors[3];
+  if (width <= 200) {
+    yyyy.style.backgroundColor = colors[1];
+  } else if (width > 200 && width <= 400) {
+    yyyy.style.backgroundColor = colors[2];
+  } else if (width > 400 && width <= 600) {
+    yyyy.style.backgroundColor = colors[3];
+  } else if (width > 600 && width <= 800) {
+    yyyy.style.backgroundColor = colors[4];
   }
-};
-*/
-
-function handleMouseEnter() {
-  h2.innerText = "The mouse is here!";
-  h2.style.color = colors[0];
 }
 
-function handleMouseLeave() {
-  h2.innerText = "The mouse is gone!";
-  h2.style.color = "blue";
+window.addEventListener("resize", handleResize);
+
+/* 
+const title = document.querySelector("body");
+const colors = [
+  "#1abc9c",
+  "#3498db",
+  "#9b59b6",
+  "#f39c12",
+  "#e74c3c",
+  "#C18282",
+  "#FF50CF",
+  "#0A9696",
+];
+const RESIZE_CLASS = (title.style.backgroundColor = colors[0]);
+
+function handleResize() {
+  var wframe = window.innerWidth;
+  console.log(wframe);
+  if (wframe <= 200) {
+    title.style.backgroundColor = colors[1];
+  } else if (wframe > 200 && wframe <= 400) {
+    title.style.backgroundColor = colors[2];
+  } else if (wframe > 400 && wframe <= 600) {
+    title.style.backgroundColor = colors[3];
+  } else if (wframe > 600 && wframe <= 800) {
+    title.style.backgroundColor = colors[4];
+  } else if (wframe > 800 && wframe <= 1000) {
+    title.style.backgroundColor = colors[6];
+  } else if (wframe > 1000 && wframe <= 1200) {
+    title.style.backgroundColor = colors[6];
+  } else if (wframe > 1200 && wframe <= 1400) {
+    title.style.backgroundColor = colors[7];
+  }
 }
 
-function handleWindowContextmenu() {
-  h2.innerText = "That was a right click!";
-  h2.style.color = "brown";
-}
-
-function handleWindowResize() {
-  h2.innerText = "You just resized!";
-  h2.style.color = "green";
-}
-
-h2.addEventListener("mouseenter", handleMouseEnter);
-h2.addEventListener("mouseleave", handleMouseLeave);
-
-window.addEventListener("contextmenu", handleWindowContextmenu);
-window.addEventListener("resize", handleWindowResize);
+window.addEventListener("resize", handleResize);
+ */
