@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Challenge</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla Challenge</title>
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/style.css">
   </head>
+
   <body>
-    <h1 id="title">Hello</h1>
+      <div id="title">Random Number Game</div>
+    <div class="input-text">Generate a number between 0 and 
+      <form id="generate">
+        <input class="generateNumberBetween" required type="text"></input>
+      </form>
+    </div>
+<div class="input-text">Guess the number:
+  <form id="numberSubmitBtn">
+    <input id="guessTheNumber" required type="text" />      
+    <input type="submit" value="play!"></input>
+  </form>
+</div>
+<div id="result" class="hidden">
+  
+</div>
     <script src="src/index.js"></script>
   </body>
 </html>
+

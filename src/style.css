@@ -1,6 +1,11 @@
-#title {
-  color: white;
+.input-text {
+  display: flex;
 }
-body {
-  background-color: #1abc9c;
+
+#title {
+  font-size: 30px;
+}
+
+.hidden {
+  display: none;
 }
