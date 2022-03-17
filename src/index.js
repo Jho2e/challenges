@@ -1,27 +1,32 @@
-const clockTitle = document.querySelector(".js-clock");
+const colors = [
+  "#ef5777",
+  "#575fcf",
+  "#4bcffa",
+  "#34e7e4",
+  "#0be881",
+  "#f53b57",
+  "#3c40c6",
+  "#0fbcf9",
+  "#00d8d6",
+  "#05c46b",
+  "#ffc048",
+  "#ffdd59",
+  "#ff5e57",
+  "#d2dae2",
+  "#485460",
+  "#ffa801",
+  "#ffd32a",
+  "#ff3f34",
+];
 
-function getClock() {
-  const second = 1000;
-  const minute = second * 60;
-  const hour = minute * 60;
-  const day = hour * 24;
+const button = document.querySelector("#choseColorBtn");
+const body = document.querySelector("body");
 
-  const christmasEve = new Date(2022, 11, 25, 0, 0, 0);
-  const now = new Date();
-  const remain = christmasEve - now;
+function randomColorClick() {
+  const chosenColor1 = colors[Math.floor(Math.random() * colors.length)];
+  const chosenColor2 = colors[Math.floor(Math.random() * colors.length)];
 
-  /* Date - Date 를 했을 때 나오는 숫자의 의미는
-    " XXXXXXXXXXX초.XXX밀리초 "이다
-    이것을 아래처럼 하면 일,시간,분,초 로 변환할 수 있다.
-  */
-
-  const days = Math.floor(remain / day);
-  const hours = Math.floor((remain % day) / hour);
-  const minutes = Math.floor((remain % hour) / minute);
-  const seconds = Math.floor((remain % minute) / second);
-
-  clockTitle.innerText = `${days}d:${hours}h:${minutes}m:${seconds}s`;
+  body.style.backgroundImage = `linear-gradient(to right,${chosenColor1}, ${chosenColor2})`;
 }
 
-getClock();
-setInterval(getClock, 1000);
+button.addEventListener("click", randomColorClick);
