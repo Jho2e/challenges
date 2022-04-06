@@ -61,7 +61,7 @@ body {
   padding-top: 10px;
   padding-bottom: 15px;
 
-  writing-mode: vertical-rl;
+  writing-mode: vertical-lr;
   text-orientation: upright;
 }
 
@@ -127,7 +127,7 @@ body {
 }
 
 .main img {
-  width: 47.45%;
+  width: 47.7%;
   height: 714px;
 }
 
@@ -152,7 +152,7 @@ body {
 
   z-index: 10;
   left: 92%;
-  bottom: -6%;
+  bottom: 5%;
   border-radius: 5px;
   background-color: #fae301;
   width: 30px;
