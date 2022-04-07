@@ -5,6 +5,12 @@
 .gallery_third {
   padding: 95px 100px;
 }
+
+img:not(#paintbox-img, #shop-img):hover {
+  opacity: 0.5;
+  border: 5px solid black;
+}
+
 body {
   width: 85%;
   height: 320vh;
@@ -13,10 +19,11 @@ header {
   z-index: 1;
   background-color: white;
 
+  width: 85%;
   position: fixed;
   top: 0;
-  left: 140px;
-  right: 140px;
+  left: 100px;
+  right: 120px;
 }
 
 ul li {
