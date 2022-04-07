@@ -1,0 +1,162 @@
+@import "reset.css";
+@import "variable.css";
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  color: var(--color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.grid {
+  display: grid;
+
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  grid-template-rows: 1fr repeat(5, 1.8fr) 1fr;
+}
+
+.sidebar-left-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-column: 1/2;
+  grid-row: 1/2;
+
+  border-right: 2px solid var(--color);
+  border-bottom: 2px solid var(--color);
+}
+
+.sidebar-right-menu {
+  grid-column: 3/4;
+  grid-row: 1/2;
+
+  color: var(--color);
+  border-left: 1px solid var(--color);
+  border-bottom: 1px solid var(--color);
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.sidebar-left-number {
+  grid-column: 1/2;
+  grid-row: 2/-2;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-left-number div,
+.sidebar-right-number div {
+  width: 100%;
+  height: 20%;
+
+  border-bottom: 2px solid var(--color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.sidebar-right-number {
+  grid-column: 3/4;
+  grid-row: 2/-2;
+
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.contents-center-image {
+  grid-column: 2/3;
+  grid-row: 2/-2;
+
+  background-color: rebeccapurple;
+  grid-column: 2/3;
+  grid-row: 2/-2;
+}
+
+.contents-center-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  border-left: 2px solid var(--color);
+  border-right: 2px solid var(--color);
+
+  background-color: white;
+  grid-column: 2/3;
+  grid-row: -2/-1;
+
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 20px;
+  color: var(--color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* footer 움직임 */
+
+@keyframes footerMove {
+  0% {
+    transform: translateX(-75px);
+  }
+  50% {
+    transform: translateX(75px);
+  }
+  100% {
+    transform: translateX(-75px);
+  }
+}
+
+.footer span {
+  will-change: transform;
+  animation: footerMove 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+.empty-first {
+  grid-column: 1/2;
+  grid-row: -2/-1;
+
+  background-color: white;
+  z-index: 2;
+}
+
+.empty-second {
+  grid-column: 3/4;
+  grid-row: -2/-1;
+
+  background-color: white;
+  z-index: 2;
+}
+
+/* hover 목록들 */
+
+.sidebar-right-menu:hover,
+.sidebar-left-number div:hover,
+.sidebar-right-number div:hover {
+  background-color: var(--color);
+  color: white;
+}
+
+.contents-center-image:hover {
+  cursor: pointer;
+}
