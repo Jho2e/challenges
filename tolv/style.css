@@ -56,7 +56,7 @@ header nav ul span {
 }
 
 header nav ul:first-child {
-  width: 41%;
+  width: 44%;
 }
 
 header nav ul:nth-child(2) {
@@ -254,14 +254,71 @@ main {
 }
 
 .image-grid__column div img:hover {
-  opacity: 0.5;
+  filter: blur(30px);
 }
-
 /*
 F O O T E R G R I D C O L U M N
 */
 
 .footer-grid__column {
   background-color: #535851;
-  width: 100%;
+  width: 70%;
+
+  margin-top: 5.4%;
+
+  padding-left: 15%;
+  padding-right: 15%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-grid-top {
+  padding-top: 10%;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+.footer-grid-top div {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1.7em;
+  font-size: 1.1em;
+}
+
+.footer-grid-top div div {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-grid-top div span {
+  color: white;
+}
+
+.footer-grid-top div span:first-child,
+.footer-grid-top div:last-child span:nth-child(4) {
+  color: #9fa29e;
+}
+
+.footer-grid-top div:last-child span:nth-child(4) {
+  margin-top: 30%;
+}
+
+.footer-grid-bottom {
+  margin-top: 5%;
+  margin-bottom: 10%;
+
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 0.9em;
+}
+
+.footer-grid-bottom-logo {
+  margin-right: 40%;
 }
