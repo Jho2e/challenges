@@ -20,7 +20,7 @@ header {
 }
 .nav-bar {
   background-color: white;
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   top: 0;
   left: 0;
@@ -118,7 +118,7 @@ G R I D  시 작
 */
 
 .main-grid__column {
-  background-color: wheat;
+  background-color: white;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -181,6 +181,7 @@ G R I D  시 작
   height: 100%;
 }
 .main-grid-photo > img {
+  line-height: 0;
   overflow: hidden;
   padding-right: 20%;
   padding-left: 20%;
@@ -260,6 +261,45 @@ bottom__column
 /*
 메인 그리드 효과
 */
+.main-grid-contents {
+  position: relative;
+}
+.main-grid-invisible,
+.main-grid-blur {
+  z-index: 1;
+
+  position: absolute;
+  top: 10%;
+  left: 0;
+  height: 80%;
+  width: 100%;
+  background: inherit;
+  /* typographic styles */
+  color: black;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+
+  /* position the text centrally*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* hide the title by default */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.main-grid-blur {
+  top: 0;
+  height: 100%;
+  background: rgba(90, 0, 10, 0.4);
+}
+
+.main-grid-contents:hover,
+.main-grid-invisible:hover,
+.main-grid-blur:hover {
+  opacity: 1;
+}
 
 /*
 바텀 효과
