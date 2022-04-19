@@ -34,6 +34,11 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
 }
+.header-right ul:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
 .right1 {
   background-color: #5ea3ec;
 }
@@ -48,6 +53,8 @@ body {
   width: 100%;
 }
 .header-right > ul {
+  opacity: 0.8;
+
   width: 100%;
   height: 100%;
   display: flex;
@@ -275,6 +282,15 @@ content5-site-grid
   width: 100%;
   box-sizing: border-box;
 }
+.content5-site-grid > div > img:hover,
+.content5-site-grid > div > span:hover {
+  font-weight: bold;
+}
+.content5-site-grid > div:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
 
 .content5-stayUpTo {
   display: flex;
@@ -306,7 +322,16 @@ content5-site-grid
   padding-right: 5%;
   box-sizing: border-box;
 }
-
+.content5-stayUpTo > span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.content5-stayUpTo > div:hover {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
 /*
 
 footer
@@ -338,4 +363,19 @@ footer > span:nth-child(3) {
 }
 .line-through {
   text-decoration: line-through;
+}
+
+footer > span:hover {
+  cursor: pointer;
+  font-family: "Square Peg", cursive;
+  font-size: 1.8em;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+span:hover {
+  font-weight: bolder;
+  cursor: text;
 }

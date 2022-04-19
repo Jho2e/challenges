@@ -1,0 +1,647 @@
+@import "reset.css";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  width: 100%;
+
+  padding-top: 36.1px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 30.85px;
+
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  background-color: white;
+  padding-top: 0.2%;
+  padding-bottom: 0.2%;
+  border-bottom: 1px solid #e5e5e5;
+
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+h1 {
+  margin-right: 3%;
+  white-space: nowrap;
+
+  font-size: 1.6em;
+  font-weight: bold;
+
+  letter-spacing: -2px;
+}
+
+nav {
+  display: flex;
+
+  width: 80%;
+}
+
+nav > ul {
+  display: flex;
+
+  margin-right: 60%;
+
+  box-sizing: border-box;
+}
+
+nav > ul > li:not(li:last-child) {
+  margin-right: 12%;
+}
+
+nav > ul > li > span {
+  white-space: nowrap;
+
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+nav > ul:nth-child(2) > li {
+  margin-right: 15% !important;
+}
+
+/* 
+
+main 시작
+
+*/
+
+.grid1__coulmn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 95vh;
+
+  margin-bottom: 5%;
+}
+
+.grid1__coulmn > div {
+  background-size: cover;
+
+  position: relative;
+
+  padding-top: 3%;
+  padding-left: 5%;
+}
+
+.grid1__coulmn > div > span:first-child {
+  text-align: center;
+}
+
+.grid1-1 > span:first-child {
+  width: 5%;
+  text-align: center;
+}
+
+.grid1-1 {
+  background: url("screenshots/1.png") no-repeat;
+}
+
+.grid1-2 {
+  background: url("screenshots/2.jpg") no-repeat;
+}
+
+.grid1-1 > span:first-child,
+.grid1-2 > span:first-child {
+  color: red;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+
+  width: 30%;
+
+  justify-content: center;
+}
+
+.grid1-span-emphasize {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.grid1-1 > span:nth-child(2),
+.grid1-2 > span:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+
+  white-space: nowrap;
+}
+
+/*
+
+grid2__column
+
+*/
+
+.gallery2__column {
+  padding-right: 5%;
+  padding-left: 5%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery2-intro {
+  width: 100%;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 5%;
+}
+.gallery2-intro > div:first-child {
+  margin-right: 5%;
+}
+.gallery2-intro > div:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.gallery2-intro > div {
+  font-size: 1.3em;
+}
+
+.grid2__column {
+  box-sizing: border-box;
+  width: 100%;
+  height: 80vh;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+
+  margin-bottom: 8%;
+}
+
+.grid2__column > div {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.grid2__column > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+}
+
+.gallery2__column > button:hover {
+  cursor: pointer;
+}
+.gallery2__column > button {
+  width: 18%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+
+  font-weight: 500;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+
+  border: none;
+
+  margin-bottom: 8%;
+}
+
+/*
+
+gallery3 __ column
+
+*/
+.gallery3__column {
+  margin-bottom: 8%;
+}
+
+.grid3__column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  height: 290vh;
+}
+
+.grid3__column > div:first-child {
+  background: url("screenshots/5.webp") no-repeat;
+  background-size: cover;
+
+  padding-top: 3%;
+  padding-left: 5%;
+
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  color: #200000;
+}
+.grid3__column > div:nth-child(2) {
+  background: url("screenshots/6.webp") no-repeat;
+  background-size: cover;
+  padding-top: 3%;
+  padding-left: 5%;
+
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  color: #200000;
+}
+.grid3__column > div:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.grid3__column > div:nth-child(3) > span,
+.grid3__column > div:nth-child(3) > p {
+  margin-bottom: 5%;
+}
+
+.grid3__column > div:nth-child(3) > span:first-child {
+  font-size: 0.7em;
+  font-weight: 500;
+}
+.grid3__column > div:nth-child(3) > span:nth-child(2) {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.grid3__column > div:nth-child(3) > p {
+  font-size: 0.8em;
+  font-weight: 500;
+  line-height: 1.3em;
+}
+
+.grid3__column > div:nth-child(4) {
+  background: url("screenshots/7.webp") no-repeat;
+  background-size: cover;
+}
+.grid3__column > div:nth-child(5) {
+  background: url("screenshots/8.webp") no-repeat;
+  background-size: cover;
+}
+
+.grid3__column > div:nth-child(6) {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.grid3__column > div:nth-child(6) > span:first-child {
+  font-size: 0.7em;
+  font-weight: 500;
+}
+.grid3__column > div:nth-child(6) > span,
+.grid3__column > div:nth-child(6) > p {
+  margin-bottom: 5%;
+}
+
+.grid3__column > div:nth-child(6) > span:first-child {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.grid3__column > div:nth-child(6) > p {
+  font-size: 0.8em;
+  font-weight: 500;
+  line-height: 1.3em;
+}
+
+.grid3__column > div:nth-child(6) > span:last-child {
+  white-space: nowrap;
+  width: 25%;
+  padding-bottom: 1%;
+  border-bottom: 2px solid black;
+  transition: all 0.3s ease-in-out;
+}
+
+.grid3__column > div:nth-child(6) > span:last-child:hover {
+  cursor: pointer;
+  border-color: white;
+}
+
+/* 
+
+grid4__column
+
+*/
+
+.gallery4__column {
+  margin-bottom: 8%;
+}
+
+.gallery4-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gallery4-intro > span:first-child {
+  margin-bottom: 3%;
+  font-size: 0.7em;
+  font-weight: 500;
+}
+.gallery4-intro > span:nth-child(2) {
+  margin-bottom: 10%;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.grid4__column {
+  display: grid;
+  grid-template-columns: 1fr 6fr 3fr 1fr;
+  grid-template-rows: auto;
+  height: 90vh;
+}
+
+.grid4__column > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid4-image1 {
+  background: url("screenshots/10.webp") no-repeat;
+  background-size: cover;
+}
+.grid4-image2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+}
+.grid4-image2 > img {
+  width: 100%;
+  height: 50%;
+  margin-bottom: 5%;
+}
+.grid4-image2 > span {
+  font-size: 0.9em;
+  font-weight: 500;
+}
+.grid4__column > div > i:hover {
+  cursor: pointer;
+}
+
+/*
+
+gallery5__column
+
+*/
+
+.gallery5__column {
+  width: 100%;
+  height: 40vh;
+
+  margin-bottom: 5%;
+}
+
+.gallery5__column > div > img {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery5-images {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  height: 40vh;
+}
+
+.gallery5-images > div:first-child {
+  width: 100%;
+  height: 100%;
+  background: url("screenshots/20.jpg") no-repeat;
+  background-size: cover;
+}
+.gallery5-images > div:nth-child(2) {
+  width: 100%;
+  height: 100%;
+  background: url("screenshots/21.jpg") no-repeat;
+  background-size: cover;
+}
+.gallery5-images > div:nth-child(3) {
+  width: 100%;
+  height: 100%;
+  background: url("screenshots/22.jpg") no-repeat;
+  background-size: cover;
+}
+.gallery5-images > div:nth-child(4) {
+  width: 100%;
+  height: 100%;
+  background: url("screenshots/23.jpg") no-repeat;
+  background-size: cover;
+}
+.gallery5-images > div:nth-child(5) {
+  width: 100%;
+  height: 100%;
+  background: url("screenshots/24.jpg") no-repeat;
+  background-size: cover;
+}
+
+/*
+
+ㅡㅡㅡ 특 수 효 과 ㅡㅡㅡㅡ
+
+*/
+
+.gallery5-relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.gallery5__invisible {
+  z-index: -1;
+  color: white;
+  background-color: black;
+  opacity: 0.3;
+  font-size: 2em;
+  font-weight: bold;
+
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  position: absolute;
+}
+.gallery5__invisible > span {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery5-relative:hover .gallery5__invisible {
+  z-index: 1;
+  cursor: pointer;
+}
+
+/*
+
+gallery6__column
+
+*/
+
+.gallery6__column {
+  padding-left: 5%;
+  padding-right: 2%;
+}
+
+.grid6__column {
+  display: grid;
+  grid-template-columns: 4fr 3fr 2fr;
+  grid-template-rows: auto;
+
+  height: 30vh;
+}
+.grid6__column > div > span {
+  font-size: 0.8em;
+  font-weight: bold;
+  white-space: nowrap;
+}
+#gallery6-form > input {
+  width: 70%;
+  height: 4vh;
+  box-sizing: border-box;
+}
+
+#gallery6-form > input::placeholder {
+  padding-left: 2%;
+}
+
+/* 체크박스 만들기*/
+
+/*input 은 숨겨주기*/
+input#chk_top {
+  display: none;
+}
+/*input 바로 다음의 label*/
+input#chk_top + label {
+  cursor: pointer;
+}
+
+/*input 바로 다음의 label:before 에 체크하기 전 CSS 설정*/
+input#chk_top + label:before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  border: 1px solid #cbcbcb;
+  vertical-align: middle; /*체크 전과 체크 후 높이 차이 때문에 설정*/
+}
+
+/*checked된 input 바로 다음의 label:before 에 체크 후 CSS 설정*/
+input#chk_top:checked + label:before {
+  content: "\f00c"; /*폰트어썸 유니코드*/
+  font-family: "Font Awesome 5 free"; /*폰트어썸 아이콘 사용*/
+  font-weight: 900; /*폰트어썸 설정*/
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  font-size: 1em;
+  text-align: center;
+}
+
+/*
+
+재개 
+
+*/
+.grid6-1 {
+  display: flex;
+  flex-direction: column;
+}
+.grid6-1 > span:first-child {
+  margin-bottom: 1%;
+}
+.grid6-checkbox {
+  margin-bottom: 3%;
+}
+
+.grid6-1-blackbox {
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  width: 70%;
+  height: 5vh;
+
+  font-size: 0.9em;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.grid6-2 {
+  margin-right: 5%;
+}
+
+.grid6-2 > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0.8em;
+  font-weight: 500;
+}
+
+.grid6-2 > div:first-child {
+  margin-bottom: 10%;
+}
+
+.grid6-3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  font-size: 0.8em;
+  font-weight: 500;
+
+  padding-right: 5%;
+}
+
+.grid6-3 > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.grid6-3 > div:first-child {
+  margin-right: 15%;
+}
+
+.footer-card {
+  width: 100%;
+}
+
+.footer-card > img {
+  margin-left: 4%;
+  width: 80%;
+  object-fit: cover;
+}
+
+.bold {
+  font-weight: bold;
+}
