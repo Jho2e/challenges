@@ -24,7 +24,7 @@ body {
 }
 .header-right {
   position: fixed;
-  width: 15%;
+
   height: 100vh;
 
   top: 0;
@@ -53,7 +53,7 @@ body {
   width: 100%;
 }
 .header-right > ul {
-  opacity: 0.8;
+  opacity: 1;
 
   width: 100%;
   height: 100%;
@@ -378,4 +378,37 @@ img:hover {
 span:hover {
   font-weight: bolder;
   cursor: text;
+}
+
+/*
+
+새로운 기능
+
+- js연습 코드를 위한 css추가
+
+*/
+
+@keyframes slidein {
+  from {
+    width: 100px;
+  }
+
+  to {
+    width: 1000px;
+  }
+}
+
+.right1.active {
+  animation: slidein 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.right2.active {
+  animation: slidein 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.right3.active {
+  animation: slidein 1.5s;
+  animation-fill-mode: forwards;
 }
