@@ -1,0 +1,78 @@
+
+
+---------상단 고정 nav바에 그림자 설정하기 
+  background-color: white;
+  -webkit-box-shadow: 0 2px 10px 0 rgb(0 0 0 / 30%);
+  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 30%);
+
+
+----------------------------------------------------
+/* 이미지 크기 설정 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 한 span 또는 div 에서 줄바꾸기*/
+
+</br>
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+position absolute와 relative를 이용한
+가운데 정렬 ----
+
+.grid1-2 {
+  background: url("screenshots/2.jpg") no-repeat;
+  background-size: cover;
+
+  position: relative;
+}
+
+.grid1-2 > span:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+}
+
+
+&&&
+
+체크박스 만들기
+
+/**/
+/*input 은 숨겨주기*/
+input#chk_top {
+  display: none;
+}
+/*input 바로 다음의 label*/
+input#chk_top + label {
+  cursor: pointer;
+}
+
+/*input 바로 다음의 label:before 에 체크하기 전 CSS 설정*/
+input#chk_top + label:before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  border: 1px solid #cbcbcb;
+  vertical-align: middle; /*체크 전과 체크 후 높이 차이 때문에 설정*/
+}
+
+/*checked된 input 바로 다음의 label:before 에 체크 후 CSS 설정*/
+input#chk_top:checked + label:before {
+  content: "\f00c"; /*폰트어썸 유니코드*/
+  font-family: "Font Awesome 5 free"; /*폰트어썸 아이콘 사용*/
+  font-weight: 900; /*폰트어썸 설정*/
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 1em;
+  text-align: center;
+}
+
+
+< 쓰는법 === &lt; , &gt;

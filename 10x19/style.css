@@ -160,3 +160,7 @@ body {
 .contents-center-image:hover {
   cursor: pointer;
 }
+
+div:hover {
+  cursor: pointer;
+}
