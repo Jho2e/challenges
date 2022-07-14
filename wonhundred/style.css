@@ -12,7 +12,6 @@ body {
 header {
   display: flex;
   align-items: center;
-  height: 30.85px;
 
   position: fixed;
   width: 100%;
@@ -27,6 +26,10 @@ header {
 
   padding-right: 3%;
   padding-left: 3%;
+}
+
+.header_div {
+  margin-right: 3%;
 }
 
 h1 {
@@ -644,4 +647,39 @@ input#chk_top:checked + label:before {
 
 .bold {
   font-weight: bold;
+}
+
+/*     상단 nav바 반응형                */
+
+.navbar__toogleBtn {
+  display: none;
+  color: black;
+}
+
+@media screen and (max-width: 780px) {
+  .navbar__toogleBtn {
+    display: block;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  header > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  header > nav > ul {
+    flex-direction: column;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
 }
